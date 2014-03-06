@@ -1,33 +1,11 @@
 'use strict';
 var assert = require('assert');
-var padStdio = require('./index');
+var execFile = require('child_process').execFile;
 
-it('should pad the output of stdout', function (cb) {
-	var _write = process.stdout.write.bind(process.stdout);
-
-	process.stdout.write = function (str) {
-		if (/  foo/.test(str)) {
-			assert(true);
-			cb();
-		}
-	};
-
-	padStdio.stdout('  ');
-	console.log('foo');
-	process.stdout.write = _write;
-});
-
-it('should pad the output of stderr', function (cb) {
-	var _write = process.stderr.write.bind(process.stderr);
-
-	process.stderr.write = function (str) {
-		if (/  foo/.test(str)) {
-			assert(true);
-			cb();
-		}
-	};
-
-	padStdio.stderr('  ');
-	console.error('foo');
-	process.stderr.write = _write;
+it('should pad the output of stdout and stderr', function (cb) {
+	execFile('node', ['fixture.js'], function (err, stdout, stderr) {
+		assert.equal(stdout.trimRight(), '  foo');
+		assert.equal(stderr.trimRight(), '  foo');
+		cb();
+	});
 });
