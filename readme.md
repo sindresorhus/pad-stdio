@@ -4,7 +4,7 @@
 
 Especially useful with CLI tools when you don't directly control the output.
 
-![](screenshot.png)
+![](https://f.cloud.github.com/assets/170270/2420088/0c74e148-ab6a-11e3-9c1e-3ea2b91d24f2.png)
 
 
 ## Install
