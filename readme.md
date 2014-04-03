@@ -1,4 +1,4 @@
-# pad-stdio [![Build Status](https://travis-ci.org/sindresorhus/pad-stdio.png?branch=master)](https://travis-ci.org/sindresorhus/pad-stdio)
+# pad-stdio [![Build Status](https://travis-ci.org/sindresorhus/pad-stdio.svg?branch=master)](https://travis-ci.org/sindresorhus/pad-stdio)
 
 > Pad stdout and stderr
 
@@ -14,7 +14,7 @@ $ npm install --save pad-stdio
 ```
 
 
-## Example
+## Usage
 
 ```js
 var padStdio = require('pad-stdio');
