@@ -9,7 +9,7 @@ Especially useful with CLI tools when you don't directly control the output.
 
 ## Install
 
-```bash
+```sh
 $ npm install --save pad-stdio
 ```
 
@@ -46,4 +46,4 @@ Pads each line of `process.stderr` with the supplied pad string until the method
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
