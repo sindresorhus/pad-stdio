@@ -1,5 +1,5 @@
 'use strict';
-var padStdio = require('./index');
+var padStdio = require('./');
 
 padStdio.stdout('  ');
 padStdio.stderr('  ');
