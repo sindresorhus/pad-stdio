@@ -1,6 +1,6 @@
 {
   "name": "pad-stdio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Pad stdout and stderr",
   "license": "MIT",
   "repository": "sindresorhus/pad-stdio",
