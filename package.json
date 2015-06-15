@@ -29,7 +29,7 @@
     "stderr"
   ],
   "dependencies": {
-    "lpad": "^1.0.0"
+    "lpad": "^2.0.1"
   },
   "devDependencies": {
     "mocha": "*"
