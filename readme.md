@@ -9,7 +9,7 @@ Especially useful with CLI tools when you don't directly control the output.
 
 ## Install
 
-```sh
+```
 $ npm install --save pad-stdio
 ```
 
