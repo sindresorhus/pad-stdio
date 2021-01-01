@@ -1,4 +1,4 @@
-# pad-stdio [![Build Status](https://travis-ci.org/sindresorhus/pad-stdio.svg?branch=master)](https://travis-ci.org/sindresorhus/pad-stdio)
+# pad-stdio
 
 > Pad stdout and stderr
 
