@@ -1,11 +1,11 @@
-'use strict';
-var assert = require('assert');
-var execFile = require('child_process').execFile;
+import {promisify} from 'util';
+import {execFile} from 'child_process';
+import test from 'ava';
 
-it('should pad the output of stdout and stderr', function (cb) {
-	execFile('node', ['fixture.js'], function (err, stdout, stderr) {
-		assert.equal(stdout.trimRight(), '  foo');
-		assert.equal(stderr.trimRight(), '  foo');
-		cb();
-	});
+const execFileP = promisify(execFile);
+
+test('main', async t => {
+	const {stdout, stderr} = await execFileP(process.execPath, ['fixture.js']);
+	t.is(stdout.trimEnd(), '  foo');
+	t.is(stderr.trimEnd(), '  foo');
 });

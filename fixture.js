@@ -1,7 +1,6 @@
-'use strict';
-var padStdio = require('./');
+import {padStdout, padStderr} from './index.js';
 
-padStdio.stdout('  ');
-padStdio.stderr('  ');
+padStdout('  ');
+padStderr('  ');
 console.log('foo');
 console.error('foo');

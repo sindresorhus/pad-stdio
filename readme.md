@@ -6,24 +6,22 @@ Especially useful with CLI tools when you don't directly control the output.
 
 ![](https://f.cloud.github.com/assets/170270/2420088/0c74e148-ab6a-11e3-9c1e-3ea2b91d24f2.png)
 
-
 ## Install
 
 ```
-$ npm install --save pad-stdio
+$ npm install pad-stdio
 ```
-
 
 ## Usage
 
 ```js
-var padStdio = require('pad-stdio');
+import {padStdout} from 'pad-stdio';
 
-padStdio.stdout('  ');      // start padding
+padStdout('  ');      // Start padding
 console.log('foo');
-padStdio.stdout('    ');
+padStdout('    ');
 console.log('bar');
-padStdio.stdout();          // end padding
+padStdout();          // End padding
 console.log('baz');
 
 /*
@@ -35,15 +33,10 @@ baz
 
 ## API
 
-### padStdio.stdout(pad)
+### padStdout(padString)
 
-Pads each line of `process.stdout` with the supplied pad string until the method is called again with no arguments.
+Pads each line of `process.stdout` with the given pad string until the method is called again with no arguments.
 
-### padStdio.stderr(pad)
+### padStderr(padString)
 
-Pads each line of `process.stderr` with the supplied pad string until the method is called again with no arguments.
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+Pads each line of `process.stderr` with the given pad string until the method is called again with no arguments.

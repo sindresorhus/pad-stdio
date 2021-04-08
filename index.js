@@ -1,16 +1,16 @@
-'use strict';
-var lpad = require('lpad');
-var _outWrite = process.stdout.write.bind(process.stdout);
-var _errWrite = process.stderr.write.bind(process.stderr);
+import leftPad from 'lpad';
 
-exports.stdout = function (pad) {
-	process.stdout.write = pad ? function (str) {
-		_outWrite(lpad(str, pad));
-	} : _outWrite;
-};
+const _outWrite = process.stdout.write.bind(process.stdout);
+const _errorWrite = process.stderr.write.bind(process.stderr);
 
-exports.stderr = function (pad) {
-	process.stderr.write = pad ? function (str) {
-		_errWrite(lpad(str, pad));
-	} : _errWrite;
-};
+export function padStdout(padString) {
+	process.stdout.write = padString ? (string => {
+		_outWrite(leftPad(string, padString));
+	}) : _outWrite;
+}
+
+export function padStderr(padString) {
+	process.stderr.write = padString ? (string => {
+		_errorWrite(leftPad(string, padString));
+	}) : _errorWrite;
+}
